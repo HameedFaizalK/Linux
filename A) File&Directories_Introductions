@@ -1,3 +1,27 @@
+In this concept we will cover following things : 
+COMMANDS     OPTIONS
+=============================
+mkdir        -p
+ls           -l, -ld, -la, -ltr, -iR, -R, -t, -a, -i
+touch  
+cat
+rm           -r, -rf, -f
+cd 
+pwd
+head         -n
+tail
+less
+more
+cp
+mv
+echo
+clear
+uname
+df
+whoami
+w
+========================================
+
 
 **Command to create directory**
 ============================
