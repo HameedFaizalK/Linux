@@ -1,4 +1,4 @@
-Essansial commands for LVM: (https://www.tecmint.com/create-lvm-storage-in-linux/)
+** Essansial commands for LVM: (https://www.tecmint.com/create-lvm-storage-in-linux/) **
 #reveal the distinct components: PV, VG, LV
  -> lvs, pvs, vgs
 #ist all the disks and their partitions
