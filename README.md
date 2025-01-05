@@ -1,7 +1,7 @@
 **Essansial commands for LVM: (https://www.tecmint.com/create-lvm-storage-in-linux/)**
-<h1>reveal the distinct components: PV, VG, LV</h1>
- -> lvs, pvs, vgs
-#ist all the disks and their partitions
+<h1>reveal the distinct components: PV, VG, LV</h1> </br>
+ -> lvs, pvs, vgs </br>
+#ist all the disks and their partitions</br>
  -> fdisk -l
 #view the detailed information about all the Volume Groups
  -> vgdisplay
