@@ -1,7 +1,56 @@
-** Essansial commands for LVM: (https://www.tecmint.com/create-lvm-storage-in-linux/) **
+Essansial commands for LVM: (https://www.tecmint.com/create-lvm-storage-in-linux/)
+```````````````````````````
+1) lvs, pvs, vgs - Show volums       2) vgdisplay - list VG 
+3) df -TH - disk usage               4) fdisk -l - Disk partition
+5) lsblk   list blocks               6) partprobe - reporting kernel 
+7) mkfs  - making file sys           8) mount - mounting created lvm's
+----------------------------------------------------------------------------------------
+_______
+STEP 1: (Create new disk manually VM) and restart
+```````
+  Check - lsblk (sdb,..)
+
+STEP 2: (Disk creating) 
+```````
+  1) fdisk /dev/sdb (sdc,sdd...etc)
+      > 'n' (new volum create)
+      > again enter 't' key to changr the volume type to (8e)
+      > wq (save&exit the terminal)
+  2) partprobe (report to kernal)
+
+       STEP 3: (Physical volume Create) PV
+       ```````
+           1) check - pvs
+           2) pvcreate /dev/sdb (sdc,sdd...etc)
+      
+       STEP 4: (Volume group Create)   VG
+       ```````
+           1) check - vgs & vgdisplay
+           2) vgcreate [VG_name] /dev/sdb /dev/sdc etc(sdc,sdd...etc)    -> check
+       
+      STEP 5: (Logical Volum Create)   LV
+      ```````
+          1) check - lvs
+          2) lvcreate -n [LV_name] -L 10G [VG_name] (we can add multiple LV from VG until VG's space going to empty)
+
+      STEP 6: (making file system)   (ext4, xfs...etc)
+      ```````
+          1) mkfs.ext4 /dev/VG_name/LV_name
+          2) Create any directory for mounting to storage
+              mkdir /mydir
+      STEP 7: (mounting & fstab entry) 
+      ```````
+          1)  mount /dev/vg_name/lv_name /mydir    -  mounting (if we want we can umount)
+          2) /dev/VG_name/LV_name  /mydir   ext4   defaults   0   0   -    fstab entry to /etc/fstab & restart
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 #reveal the distinct components: PV, VG, LV
  -> lvs, pvs, vgs
-#ist all the disks and their partitions
+#list all the disks and their partitions
  -> fdisk -l
 #view the detailed information about all the Volume Groups
  -> vgdisplay
@@ -28,8 +77,8 @@
 #Creating Volume Groups : Create a Volume Group named tecmint_add_vg using the available free PV and a PE size of 32
   -> vgcreate -s 32M tecmint_add_vg /dev/sdb1 /dev/sdc1 /dev/sdd1
     make ensure :vgs / more info -> vgs -v
-#get more vg info newely created
-  -> vgdisplay (vg name)
+    get more vg info newely created
+      -> vgdisplay (vg name)
 #Creating LVM Logical Volumes
 
 
