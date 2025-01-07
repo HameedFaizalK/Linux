@@ -1,13 +1,25 @@
 No |             Topic           |    Status    |  Lab
 ```````````````````````````````````````````````
 1  | NFS-Server                  |  pending     |
-1  | Samba - server                  |  pending     |
-1  |                   |  pending     |
-1  |                   |  pending     |
-1  |                   |  pending     |
-1  |                   |  pending     |
+1  | Samba - server              |  pending     |
+1  | Apache                      |  pending     |
+1  | Autofs                      |  pending     |
+1  | smtb-mail server            |  pending     |
+1  | root passwd recovery        |  pending     |
 1  | LVM-concept                 |  completed   |  Stored on Github
-1  |                   |  pending     |
-1  |                   |  pending     |
-1  |                   |  pending     |
-1  |                   |  pending     |
+1  | Backup(tar&zip)             |  pending     |
+1  | package management          |  pending     |
+1  | system boot process         |  pending     |
+1  | Firewalld&ssh               |  pending     |
+1  | Network troublshoot         |  pending     |
+1  | user&group management       |  pending     |
+1  | File perm % ACL's           |  pending     |
+1  | Log management              |  pending     |
+1  | Monitor&Performance Tuning  |  pending     |
+1  | Shell Scripting             |  pending     |
+1  | Version Control             |  pending     |
+1  | Backup and Recovery         |  pending     |
+1  | Web & Database Services     |  pending     |
+1  | Linux-based instance aws    |  pending     |
+1  | How to handl deplymnt crash |  pending     |
+1  | Vularanability              |  pending     |
