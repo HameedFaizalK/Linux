@@ -1,1 +1,13 @@
 cron
+Essential Commands : 
+crontab -e = create vi to cronjob page
+crontab -l = list or check cronjob is there are not
+
+
+syntax :
+      *  *  *   *   *  cmd _ TASK, SCRIPT
+      |  |  |   |   |_______ DAY OF THE WEEK
+      |  |  |   |___________ CUR MONTH OF YEAR
+      |  |  |_______________ DATE OF MONTH
+      |  |__________________ HOURS
+      |_____________________ MIN
